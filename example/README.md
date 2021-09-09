@@ -1,6 +1,6 @@
-# example
+# flutter_vibrate_example
 
-A new Flutter project.
+Demonstrates how to use the flutter_vibrate plugin.
 
 ## Getting Started
 

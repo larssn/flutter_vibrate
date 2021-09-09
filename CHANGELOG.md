@@ -1,3 +1,8 @@
+## 2.0.0
+
+* Migrated to V2 of Flutter's Android API.
+* Dropped support for 1.x of Flutter.
+
 ## 1.1.0
 
 * Merging changes and fixing lint errors

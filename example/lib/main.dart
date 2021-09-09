@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_vibrate/flutter_vibrate.dart';
 
-void main() => runApp(MyApp());
+void main() => runApp(const MyApp());
 
 class MyApp extends StatefulWidget {
+  const MyApp({Key? key}) : super(key: key);
+
   @override
   _MyAppState createState() => _MyAppState();
 }
@@ -26,9 +28,7 @@ class _MyAppState extends State<MyApp> {
     bool canVibrate = await Vibrate.canVibrate;
     setState(() {
       _canVibrate = canVibrate;
-      _canVibrate
-          ? debugPrint('This device can vibrate')
-          : debugPrint('This device cannot vibrate');
+      _canVibrate ? debugPrint('This device can vibrate') : debugPrint('This device cannot vibrate');
     });
   }
 
@@ -102,8 +102,7 @@ class _MyAppState extends State<MyApp> {
             const Divider(height: 1),
             ListTile(
               title: const Text('Heavy'),
-              leading:
-                  const Icon(Icons.notification_important, color: Colors.red),
+              leading: const Icon(Icons.notification_important, color: Colors.red),
               onTap: !_canVibrate
                   ? null
                   : () {
@@ -112,8 +111,7 @@ class _MyAppState extends State<MyApp> {
             ),
             ListTile(
               title: const Text('Medium'),
-              leading:
-                  const Icon(Icons.notification_important, color: Colors.green),
+              leading: const Icon(Icons.notification_important, color: Colors.green),
               onTap: !_canVibrate
                   ? null
                   : () {
@@ -122,8 +120,7 @@ class _MyAppState extends State<MyApp> {
             ),
             ListTile(
               title: const Text('Light'),
-              leading:
-                  Icon(Icons.notification_important, color: Colors.yellow[700]),
+              leading: Icon(Icons.notification_important, color: Colors.yellow[700]),
               onTap: !_canVibrate
                   ? null
                   : () {
